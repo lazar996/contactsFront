@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { UsersComponent } from './users/users.component';
+import { LoginDialog } from './dialog/login.dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
-   
+    UsersComponent,
+    LoginDialog
   ],
   imports: [
     BrowserModule,
@@ -22,8 +24,9 @@ import { UsersComponent } from './users/users.component';
     HttpClientModule,
     FormsModule, 
     
+    
   ],
-  entryComponents:[],
+  entryComponents:[LoginDialog],
   providers:[HttpClient],
   bootstrap: [AppComponent]
 })
